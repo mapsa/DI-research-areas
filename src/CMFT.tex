@@ -1,0 +1,377 @@
+\section{Computational Methods and Function Theory}
+
+ \def\lab#1{\label{#1}}
+
+%-------------------------mathcal------------------------------------
+\def\CA{{\mathcal A }}
+\def\CAO{{\mathcal A}_0}
+\def\CW{{\mathcal W }}
+\def\CH{{\mathcal H }}
+\def\CP{{\mathcal P }}
+\def\CK{{\mathcal K }}
+\def\CF{{\mathcal F }}
+\def\CS{{\mathcal S }}
+\def\CC{{\mathcal C }}
+\def\CQ{{\mathcal Q }}
+%\def\CD{{\mathcal D }} % it conflicts with amscd package !!!
+\def\CW{{\mathcal W}}
+\def\CV{{\mathcal V}}
+\def\CPn{{\mathcal P}_n}
+\def\CR{{\mathcal R}}
+\def\CT{{\mathcal T}}
+\def\CV{{\mathcal V}}
+\def\WO{{\mathcal W}_{\Omega }}
+
+%-------------------------------Bbb-----------------------------------
+\def\N{{\mathbb N }}
+\def\NO{{\mathbb N }_0}
+\def\Z{{\mathbb Z }}
+\def\Q{{\mathbb Q }}
+\def\R{{\mathbb R }}
+\def\C{{\mathbb C }}
+\def\F{{\mathbb F }} % anillo de los n\'umeros computables 
+\def\K{{\mathbb K }}
+\def\U{{\mathbb U }}
+\def\D{{\mathbb D }}
+\def\B{{\mathbb B }}
+\def\T{{\mathbb T }}
+
+%----------------------------Zusammengesetztes------------------------
+
+
+\def\proof{\noindent{\bf Proof.\ \ }}
+\def\phi{\varphi}
+\def\epsilon{\varepsilon}
+\def\RE{\mbox{\rm Re}\,}
+\def\IM{\mbox{\rm Im}\,}
+\def\AZ{|z|}
+\def\COG{\CC_{\Omega{_\gamma}}}
+\def\COOG{\CC(\Omega_\gamma)}
+\def\CU{\CC_u}
+\def\CUU{\CC_u'}
+\def\CHL{\CH(\Lambda)}
+\def\CHO{\CH(\Omega_\gamma^*)}
+
+\def\F{{}_2F_1}
+\def\Hyp{{}_2F_1}
+\def\HY{{}_2F_1}
+
+\def\H{{\mathcal H}(\D)}
+\def\Hb{{\mathcal H}(\DB)}
+\def\HO{{\mathcal H}_0(\D )}
+\def\Hoo#1{{\mathcal H}(\overline{\D_{#1}})}
+\def\HB#1{{\mathcal H}(\D_{#1})}
+\def\Ho#1{{\mathcal H}({#1})}
+\def\d#1{\D_{#1}}
+\def\DB{\overline{\D}}
+\def\Db#1{\overline{\D_{#1}}}
+\def\DBR{\overline{\D_\rho}}
+
+\def\DV{de la Vall\'ee Poussin }
+
+\def\zz{\overline{z}}
+%------------------------------
+
+
+
+%-------------------------mathcal
+
+\def\A{{\mathcal A }}
+\def\CW{{\mathcal W }}
+\def\CH{{\mathcal H }}
+\def\CHN{\CH'}
+\def\CP{{\mathcal P }}
+\def\CS{{\mathcal S }}
+\def\Li{{\mbox{\rm Li}}}
+
+\def\CC{{\mathcal C }}
+\def\CW{{\mathcal W}}
+\def\CR{{\mathcal R}}
+\def\CRu{{\mathcal R}^{\rm u}}
+\def\CT{{\mathcal T}}
+\def\CTT{\widetilde{{\mathcal T}}}
+\def\WO{{\mathcal W}_{\Omega }}
+
+
+
+% \def\binom#1#2{{#1\choose#2}}
+% \def\dbinom#1#2{{\displaystyle{#1\choose#2}}}
+\def\CCH{\overline{\mbox{\rm co}}\,}
+\def\CHD{{\mathcal H}(\D)}
+\def\CHDB{{\mathcal H}(\DB)}
+\def\CHDC#1{{\mathcal H}(\overline{\D_{#1}})}
+\def\CHDO#1{{\mathcal H}(\D_{#1})}
+\def\CHO{{\mathcal H}(\Omega )}
+
+%% \newlength{\intwidth}
+%% \DeclareRobustCommand{\cpvint}[2]
+%%    {\mathop{%
+%%       \text{%
+%%         \settowidth{\intwidth}{$\int$}%
+%%         \makebox[0pt][l]{\makebox[\intwidth]{$-$}}%
+%%         $\int_{#1}^{#2}$}}}
+
+\def\d#1{\D_{#1}}
+\def\DB{\overline{\D}}
+\def\Db#1{\overline{\D_{#1}}}
+\def\G#1{\Gamma\left({#1}+1\right)}
+\def\g#1{\gamma\left(#1\right)}
+\def\GA#1{\Gamma'\left({#1}+1\right)}
+\def\gA#1{\gamma'\left(#1\right)}
+\def\P#1{\Psi\left({#1}+1\right)}
+\def\p#1{\psi\left(#1\right)}
+\def\PA#1{\Psi'\left({#1}+1\right)}
+\def\pA#1{\psi'\left(#1\right)}
+% \def\tbinom#1#2{{\textstyle{#1\choose#2}}}
+
+%%% LEFT AND RIGHT BRACES SPANNED THROUGH SEVERAL ROWS IN TABLE %%%%%%%
+\newcommand{\rightbrace}[2]% #1=number of rows #2=width
+  {\multirow{#1}{#2}{%
+   $\left.{\vcenter{\hsize=0pt\vrule height #1\baselineskip
+    width 0pt}} \right\}$}}
+\newcommand{\leftbrace}[2]% #1=number of rows #2=width
+  {\multirow{#1}{#2}{%
+   $\left\{ {\vcenter{\hsize=0pt\vrule height #1\baselineskip
+    width 0pt}} \right.$}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bra}[2]% #1=number of rows #2=width
+  {\multirow{#1}{#2}{%
+   $\left[{\vcenter{\hsize=0pt\vrule height #1\baselineskip
+    width 0pt}} \right.$}}
+\newcommand{\ket}[2]% #1=number of rows #2=width
+  {\multirow{#1}{#2}{%
+   $\left.{\vcenter{\hsize=0pt\vrule height #1\baselineskip
+    width 0pt}} \right]$}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%----------------------------Neue mathematische Operatoren----------------
+
+\def\2F1{\mathop{\rm {}_2\,F_1}\nolimits}     % GAUSS HYPERGEOMETRIC
+                                              % SERIES; 02.07.2005
+\def\adj{\mathop{\rm adj}\nolimits}           % MATRIZ ADJUNTA
+\def\arcosh{\mathop{\rm arcosh}\nolimits}     % AREA COSENO HYPERBOLICO
+\def\arctg{\mathop{\rm arctg}\nolimits}       % ARCO TANGENTE USM
+                                              % O ALEMANA 
+\def\Arg{\mathop{\rm Arg}\nolimits}           % PRINCIPAL ARGUMENT
+                                              % DIFFERENT FROM \arg !
+\def\argmax{\mathop{\rm arg\ max}\limits}     % ARGUMENT (FOR) MAXIMUM 
+                                              % (VALUE); 18.07.2004
+\def\argmin{\mathop{\rm arg\ min}\limits}     % ARGUMENT (FOR) MINIMUM 
+                                              % (VALUE); 18.07.2004
+\def\arsinh{\mathop{\rm arsinh}\nolimits}     % AREA SENO HYPERBOLICO
+\def\artgh{ \mathop{\rm artgh}\nolimits}      % AREA TANGENTE HYPERBOLICO
+\def\ceiling#1{\left\lceil #1 \right\rceil}   % CEILING; 03.07.2005
+\def\cis{\mathop{\rm cis}\nolimits}           % COSENO I SENO
+\def\col{\mathop{\rm Col}\nolimits}           % COLUMN SPACE
+\def\cond{\mathop{\bf cond}\nolimits}         % CONDITION NUMBER
+\def\cosec{\mathop{\rm cosec}\nolimits}       % COSECANTE
+\def\cov{\mathop{\bf cov}\limits}             % COVARIANZA; 19.07.2004
+\def\ctg{\mathop{\rm ctg}\nolimits}           % COTANGENTE USM O
+                                              % ALEMANA 
+\def\derives#1#2{\ \overset{#1}{ \underset{#2}{\Rightarrow} }\ } %
+\def\DFT{\mathop{\rm DFT}\nolimits}           % DISCRETE FOURIER TRANSFORM
+\def\diag{\mathop{\rm diag}\nolimits}         % DIAG MATRIX
+\def\div{\mathop{\rm div}\nolimits}           % DIVERGENCIA
+\def\ds{\displaystyle}                        % DISPLAYSTYLE
+\def\float{\mathop{\rm float}\nolimits}       % FLOATING OPERATOR
+\def\floor#1{\left\lfloor #1 \right\rfloor}   % FLOOR; 03.07.2005
+\def\grad{\mathop{\bf grad}\nolimits}         % GRADIENTE
+\def\inf{\mathop{\rm inf}\limits}             % INFIMUM
+\def\laplacian{\mathop{\bigtriangleup}\nolimits}  % LAPLACIANO
+\def\linspan{\mathop{\rm lin\,span}\nolimits} % LINEAR SPAN; 06.08.06
+\def\max{\mathop{\rm max}\nolimits}           % MAXIMUM
+\def\mat#1#2#3{{\rm Mat}(#1\times #2,#3)}     % MATRIX
+\def\mean{\mathcal{E}}                        % MEAN; 23.09.2005
+\def\mid{\mathop{\;:\;}\nolimits}             % MID : FOR SET DEF.
+\def\min{\mathop{\rm min}\nolimits}           % MINIMUM
+\def\myenddemo{\hfill$\square$}               % BEWEISENDESYMBOL
+% \def\nsqmat#1#2#3{M(#1\times #2,#3)}        % OLD DEF: RECTANGULAR
+                                              % MATRIX
+\def\nullspace{\mathop{\rm Null}\nolimits}    % RANGE SPACE
+\def\range{\mathop{\rm Range}\nolimits}       % RANGE SPACE
+\def\rank{\mathop{\rm rank}\nolimits}         % RANK
+\def\rest#1{\mbox{\rm rest}\left\{#1\right\}} % RESTO DE DIVISION
+\def\rot{\mathop{\bf rot}\nolimits}           % ROTOR
+\def\seq#1#2{\ds\left\{ #1\right\}_{#2}}      % SEQUENCE; 09.05.2003
+\def\sign{\mathop{\rm sign}\nolimits}         % SIGNUM
+% \def\sqmat#1#2{M(#1\times #1,#2)}           % OLD DEF: SQUARE MATRIX
+\def\sup{\mathop{\rm sup}\limits}             % SUPREMUM
+\def\tg{\mathop{\rm tg}\nolimits}             % TANGENTE USM O ALEMANA
+\def\tr{\mathop{\bf trace}\nolimits}          % TRACE
+\def\var{\mathcal{V}}                         % VARIANZA; 23.09.2005
+\def\ZT#1{\ds\mathfrak{Z}\left[#1\right]}     % Z-TRANSFORM; 09.05.2003
+\def\ZTinv#1{\ds\mathfrak{Z}^{-1}\left[#1\right]} % INVERSE Z-TRANSFORM
+
+
+%--------------% Neue Textoperatoren-----------------------------------
+
+\def\bfref#1{{\bf\ref{#1}}}                   % BOLD FACE REF
+\def\EW{valor propio}                         % EIGENWERT
+\def\EWS{valores propios}                     % EIGENWERTE
+\def\EV{vector propio}                        % EIGENVEKTOR
+\def\EVS{vectores propios}                    % EIGENVEKTOREN
+
+%% Gradshteyn and Ryzhik's Table of Integrals, Series, and Products
+%% Alan Jeffrey and Daniel Zwillinger (eds.) Seventh edition (Feb 2007)
+%% 1171 pages, ISBN number: 0-12-373637-4 (includes a CD-ROM)
+
+%----------------------------End 0NEWMATH.STY--------------------------
+
+
+
+
+%research description here
+%Some references
+
+This research area has to do with Computational Methods applied to Pure
+Mathematics, in particular to Function Theory and Number Theory.
+
+The main researchers in this area are Stephan Ruscheweyh (U. W\"urzburg,
+Germany) and Luis Salinas (UTFSM, Chile).
+
+A constant theme in these researches is convolution theory, which we briefly
+recall.
+For two functions $f$ and $g$ analytic in the discs
+$D_{R_1}:=\{|z|<R_1\}\subset\C$ and $D_{R_2}:=\{|z|<R_2\}\subset\C$
+respectively, and represented by their power series expansions
+$f(z)=\sum_{k=0}^\infty a_k z^k$ and $g(z)=\sum_{k=0}^\infty b_k z^k$,
+the function $f*g$ is defined by
+$$
+(f*g)(z) = \sum_{k=0}^\infty a_k b_k z^k\,.
+$$
+This function is analytic in
+$D_{R_1\,R_2}:=\{|z|<R_1\,R_2\}\subset\C$
+and is called {\em Hadamard product} of $f$ and $g$.
+%% in honor of J. Hadamard's theorem about the location of the singularities
+%% of $f*g$ in terms of the singularities of the ``factors''.
+An alternative representation is by means the convolution integral
+$$
+(f*g)(z) = \frac{1}{2\pi i}\int_{|\zeta|=\rho}
+f(z/\zeta)\,g(\zeta)\,\frac{d\zeta}{\zeta}\,,\qquad
+\frac{|z|}{R_1}<\rho<R_2\,.
+$$
+For this reason $f*g$ is also called the {\em convolution\/} of $f$ and $g$.
+
+
+\subsection{Prestarlike functions}
+Let $\CH(\Omega)$ denote the set of analytic functions in a domain
+$\Omega$, For domains $\Omega$ containing the origin $\CH_0(\Omega)$
+stands for the set of functions $f\in\CH(\Omega)$ with 
+$f(0)=1$. We also use the notation
+$\CH_1(\Omega):=\{zf\,:\,f\in\CH_0(\Omega)\}$. In the special case that
+$\Omega$ is the unit disc $\D:=\{z\in\C\,:\,|z|<1\}$ we use
+the abbreviations $\CH,\CH_0,\CH_1$, respectively.
+
+A function $f\in\CH_1$ is called {\em starlike of order  $\alpha$}
+(with $\alpha<1$) if
+$$
+\RE\frac{zf'(z)}{f(z)}\geq\alpha,\quad z\in\D,
+$$
+and the set of such functions is denoted by $\CS_\alpha$. Then,
+finally, a function $f\in\CH_1$ is called {\em prestarlike of order $\alpha$ }
+if
+\begin{equation}\lab{eq:1.1}
+\frac{z}{(1-z)^{2-2\alpha}}*f(z)\ \in\ \CS_\alpha,
+\end{equation}
+The sets of these functions are denoted by $\CR_\alpha$.
+One also introduces the set $\CR_1$ to consist of the functions $f\in\CH_1$
+with
+$$
+\RE\frac{f(z)}{z}\geq\frac{1}{2},\quad z\in\D.
+$$
+Prestarlike functions have a number of interesting geometric
+properties. For instance, the set $\CC$ of univalent functions in $\CH_1$
+which map $\D$ onto convex domains equals $\CR_0$, and 
+obviously we  also have $\CR_{1/2}=\CS_{1/2}$. We refer to 
+%% Ruscheweyh
+\cite{ru-montreal} 
+and %% Sheil-Small 
+\cite{ssm-book} for a description of
+the essentials of the theory of prestarlike functions. 
+
+\subsection{Universally prestarlike functions}
+One of the basic goals in this research area, as far as geometric function
+theory is concerned, is the translation of the notion of prestarlike functions
+from the unit disc to other discs and half-planes containing the
+origin.
+
+To this end we introduced in \cite{RSS} the notion of
+{\em universally prestarlike functions\/}, which we now explain.
+Let $\Omega$ be a disc or half-plane in $\C$. 
+Then, there are two unique parameters $\gamma\in\C\setminus\{0\}$ and 
+$\rho\in[0,1]$ such that
+$$
+\Omega=
+\left\{w_{\gamma,\rho}(z)\,:\, z\in\D\right\}\,,\qquad\text{where}\quad
+w_{\gamma,\rho}(z):= \frac{\gamma z}{1-\rho z}\;.
+$$
+To make this relation visible, we also write $\Omega_{\gamma,\rho}$ for
+this $\Omega$.
+
+\vspace{2ex}\noindent {\bf Definition.}\ 
+Let $\alpha\leq1$ and $\Omega=\Omega_{\gamma,\rho}$ for some
+admissible pair $(\gamma,\rho)$.
+A function $f\in\CH_1(\Omega)$ is  called {\em prestarlike of order
+$\alpha$ in $\Omega$ } if 
+$$
+f_{\gamma,\rho}(z):=\frac{1}{\gamma}f(w_{\gamma,\rho}(z))\in\CR_\alpha.
+$$
+We deal with such functions specifically, and also with functions being
+prestarlike of a given order in several sets $\Omega_{\gamma,\rho}$
+simultaneously. 
+Of course, it makes no sense to ask for functions which are prestarlike in
+{\em all } such sets, because then we are left  with only the identity
+function.
+The situation changes already dramatically, if we admit exactly those
+$\Omega_{\gamma,\rho}$ which omit one given point, for instance the point $1$. 
+Note that $1\not\in\Omega_{\gamma,\rho}$ if and only if $|\gamma+\rho|\leq1$ 
+
+A sequence $\{a_k\}_{k\geq0}$ of on-negative real numbers with $a_0=1$
+is called {\em completly monotone sequences\/} (c.m.) if:
+\begin{equation}
+\Delta^0a_k=a\_k\geq0\,,\qquad 
+\Delta^na_k := \Delta^{n-1}a_k - \Delta^{n-1}a_{k+1}\geq0\,,\quad
+k\geq0\,,\quad n\geq1\,.
+\end{equation}
+By a well-known result of Hausdorff, $\{a_k\}_{k\geq0}$ is c.m. iff there
+is a probability measure $\mu$ on the interval $[0,1]$ such that:
+$a_k=\int_0^1t^k\,d\mu(t)$\,, $k\geq0$\,,
+or, equivalently,
+\begin{equation}
+F(z):=\sum_{k=0}^{\infty} a_k\,z^k = \int_0^1 \frac{d\mu(t)}{1-tz}\,.
+\end{equation}
+The class of such functions $F$ is denoted by $\mathcal{T}$.
+
+Let $\alpha\leq1$ and $\Lambda:=\C\setminus[1,\infty)$.
+A function $f\in\CH_1(\Lambda)$ is called
+{\em universally prestarlike of order $\alpha$\/} if and only if $f$
+is prestarlike of order $\alpha$ in all sets $\Omega_{\gamma,\rho}$ with
+$|\gamma+\rho|\leq1$.
+The set of these functions is denoted by $\CRu_\alpha$.
+This class of functions is closely related to $\mathcal{T}$.
+
+In \cite{RS}, \cite{RSS}, \cite{barusa} we started developing the
+theory of the function class $\CRu_\alpha$.
+This is a currently ongoing research.
+
+Approximation theory is one of the branches of mathematics most widely
+used in engineering applications.
+In this research area we recently considered a special approximation property
+of the famous Riemann's function:
+\begin{equation}
+\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}
+= \prod_{\substack{ p\geq 2 \\ \text{$p$ prime} }}
+  \left( 1 - \frac{1}{p^s} \right)\,, \qquad
+s\in\C\ \text{with}\ \RE(s)>1\,.
+\end{equation}
+It is well known that $\zeta(s)$ has an analytic continuation to all
+of $\C$ as a meromorphic function.
+S.M. Voronin's Universality Theorem \cite{voronin} for Riemann's zeta function
+essentially states that every non-vanishing analytic function $f(s)$ defined
+on a compact subset $K$ of the critical strip
+$\{s\in\C \mid 1/2 < \RE(s) < 1\}$
+can be uniformly approximated by certain purely imaginary shifts of the
+zeta-function. 
+In \cite{herplasa} we began to study this phenomenon from the point of view
+of high performance computing.
